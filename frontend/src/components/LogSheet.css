@@ -1,0 +1,14 @@
+.logsheet-wrapper {
+  background: #1e293b;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+  box-shadow: var(--shadow);
+}
+
+.logsheet-wrapper canvas {
+  display: block;
+  max-width: 100%;
+}
