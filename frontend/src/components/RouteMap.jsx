@@ -22,17 +22,12 @@ function colorIcon(color) {
   })
 }
 
-const START_ICON   = colorIcon('#4ade80')  // green — current position
-const PICKUP_ICON  = colorIcon('#60a5fa')  // blue  — pickup
-const DROPOFF_ICON = colorIcon('#f87171')  // red   — dropoff
+const START_ICON = colorIcon('#4ade80')
+const PICKUP_ICON = colorIcon('#60a5fa')
+const DROPOFF_ICON = colorIcon('#f87171')
 
-/**
- * Props:
- *   coords    — [[lat, lng], ...] full route polyline
- *   locations — { current: {lat, lng, label}, pickup: {...}, dropoff: {...} }
- *   stops     — array of stop objects
- */
-export default function RouteMap({ coords, locations, stops }) {
+
+export default function RouteMap({ coords, locations }) {
   if (!coords || coords.length === 0) return null
 
   const midIndex = Math.floor(coords.length / 2)
